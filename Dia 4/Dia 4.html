@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">    
+    <link href="style.css" rel="stylesheet">
+    <title>Dia 4</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="sevendaysofcode.png" style="display: block; margin: 0 auto;">
+        <img src="sevendaysofcode2.png" style="display: block; margin: 0 auto;">
+    </div>
+    <h1>Dia 4</h1>
+    <div id="descricao">
+        <p></p>
+    </div>
+    <script>
+        var num = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+        for (var i = 0; i <= 2; i++){
+            var tentativas = 3 - i
+            const num_es = prompt("Restam " + tentativas + " tentativas, Digite um numero:")
+            if(num_es == num){
+                alert("Parabéns! Você acertou!")
+                i = 3;
+            }
+            else if(tentativas > 0 && num_es != num){
+                alert("Você errou tente novamente!")
+            }
+            else if(tentativas == 0){
+                alert("Você perdeu, não restam tentativas!")
+            }
+        }
+        alert("Fim de jogo")
+        num;
+    </script>
+</body>
+</html>

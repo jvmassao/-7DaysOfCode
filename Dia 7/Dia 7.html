@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">    
+    <link href="style.css" rel="stylesheet">
+    <title>Dia 7</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="sevendaysofcode.png" style="display: block; margin: 0 auto;">
+        <img src="sevendaysofcode2.png" style="display: block; margin: 0 auto;">
+    </div>
+    <h1>Dia 7</h1>
+    <div id="descricao">
+        <p></p>
+    </div>
+    <script>
+
+        function soma(numero1, numero2){
+            return numero1 + numero2;
+        }
+
+        function multiplicacao(numero1, numero2){
+            return numero1 * numero2;
+        }
+
+        function divisao(numero1, numero2){
+            return numero1 / numero2;
+        }
+
+        function subtracao(numero1, numero2){
+            return numero1 - numero2;
+        }
+
+        var loop = 0;
+        var numero1 = 0;
+        var numero2 = 0;
+        while(loop == 0){
+            const escolha = prompt("Escolha uma opção: 1 - Soma, 2 - Subtração, 3 - Multiplicação, 4 - Divisão, 5 - Sair ");
+            if(escolha != 5){
+                numero1 = prompt("Digite o primeiro Valor:");
+                numero2 = prompt("Digite o segundo valor:");
+            }
+            const num1 = parseInt(numero1);
+            const num2 = parseInt(numero2);
+            switch(escolha){
+                case "1":
+                    alert(soma(num1, num2));
+                    break;
+                case "2":
+                    alert(subtracao(num1, num2));
+                    break;
+                case "3":
+                    alert(multiplicacao(num1, num2));
+                    break;
+                case "4":
+                    alert(divisao(num1, num2));
+                    break;
+                case "5":
+                    loop = 1;
+                    alert("Obrigado! Até logo!")
+                    break;
+            }
+        }
+
+    </script>
+</body>
+</html>

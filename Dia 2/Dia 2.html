@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">    
+    <link href="style.css" rel="stylesheet">
+    <title>Dia 2</title>
+</head>
+<body>    
+    <div id="logo">
+        <img src="sevendaysofcode.png" style="display: block; margin: 0 auto;">
+        <img src="sevendaysofcode2.png" style="display: block; margin: 0 auto;">
+    </div>
+    <h1>Dia 2</h1>
+    <div id="descricao">
+        <p></p>
+    </div>
+    <script>
+        const nome = prompt("Digite a seu nome:");
+        const idade = prompt("Quantos anos você tem?");
+        const ling = prompt("Qual linguagem de programação você está aprendendo?");
+
+        const msg = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${ling}`;
+        alert(msg);
+        const msgpgt = `Você gosta de estudar ${ling}?`;
+        const pgt = prompt(msgpgt);
+
+        if (pgt == 1)
+        {
+            alert("Muito bom! Continue estudando e você terá muito sucesso.")
+        }
+        if (pgt == 2){
+            alert("Ahh que pena... Já tentou aprender outras linguagens?")
+        }
+    </script>
+</body>
+</html>

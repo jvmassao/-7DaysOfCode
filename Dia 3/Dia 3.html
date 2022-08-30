@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">    
+    <link href="style.css" rel="stylesheet">
+    <title>Dia 3</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="sevendaysofcode.png" style="display: block; margin: 0 auto;">
+        <img src="sevendaysofcode2.png" style="display: block; margin: 0 auto;">
+    </div>
+    <h1>Dia 3</h1>
+    <div id="descricao">
+        <p></p>
+    </div>
+    <script>
+        const back_front = prompt("Você deseja se aprofundar em qual área? Digite 1 para backend e 2 para front end.");
+        if(back_front == 1){
+            alert("Você pode aprender C# ou Java");
+        }
+        else if(back_front == 2){
+            alert("Você pode aprender React ou Vue");
+        }
+        const esp_full = prompt("Você deseja se aprofundar em sua escolha ou se tornar full stack? 1 - para se aprofundar e 2 - para virar full stack");
+        if(esp_full == 1 && back_front == 1){
+            alert("Se aprofunde aprendendo mais sobre C# e Java");
+        }
+        else if(esp_full == 1 && back_front == 2){
+            alert("Se aprofunde aprendendo mais sobre HTML e Javascript");
+        }
+        else if(esp_full == 2 && back_front == 1){
+            alert("Aprenda React ou Vue");
+        }
+        else if(esp_full == 2 && back_front == 2){
+            alert("Aprenda C# e Java");
+        }
+        const ok = 0;
+        var myarray = [];
+        while(ok == 0){
+            myarray.push(prompt("Qual ferramenta gostaria de aprender/ se especializar?"));
+            var i = 0;
+            alert(myarray[0+i] + " é uma ótima linguagem para se aprender.");
+            i++;
+            const cont_loop = prompt("Há mais alguma linguagem que você gostaria de se aprofundar?1-para sim e 2- para não");
+            if(cont_loop == 2){
+                ok = 1;
+            }
+        }
+        
+   
+    </script>
+</body>
+</html>

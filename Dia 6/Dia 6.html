@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">    
+    <link href="style.css" rel="stylesheet">
+    <title>Dia 6</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="sevendaysofcode.png" style="display: block; margin: 0 auto;">
+        <img src="sevendaysofcode2.png" style="display: block; margin: 0 auto;">
+    </div>
+    <h1>Dia 6</h1>
+    <div id="descricao">
+        <p></p>
+    </div>
+    <script>
+        var alimentos = [];
+        var frutas = [];
+        var laticinios = [];
+        var congelados = [];
+        var doces = [];
+        var loop = 1;
+        var num_itens = 0;
+        var s_n = prompt("Qual alteração deseja fazer na sua lista de compras? 1 - Adicionar, 2 - Sair ");
+        while(loop == 1){
+        if(alimentos.length > 0){
+            s_n = prompt("Qual alteração deseja fazer na sua lista de compras? 1 - Adicionar, 2 - Sair, 3 - Remover ");
+        }
+        if(s_n == 1){
+            const comida = prompt("Qual comida deseja inserir? ");
+            alimentos.push(comida);
+            const categoria = prompt("Qual a categoria do alimento? 1 - Frutas, 2 - Laticinios, 3 - Congelados, 4 - Doces");
+        if(categoria == 1){
+            frutas.push(alimentos[alimentos.length - 1]);
+        }
+        if(categoria == 2){
+            laticinios.push(alimentos[alimentos.length - 1]);
+        }
+        if(categoria == 3){
+            congelados.push(alimentos[alimentos.length - 1]);
+        }
+        if(categoria == 4){
+            doces.push(alimentos[alimentos.length - 1]);
+        }
+    }
+        if(s_n == 2){
+            alert("Lista de compras: ");
+            alert("Frutas: " + frutas);
+            alert("Laticinios: " + laticinios);
+            alert("Congelados: " + congelados);
+            alert("Doces: " + doces);
+            loop = 0;
+        }
+        if(s_n == 3){
+            alert("Lista de compras: ");
+            alert("Frutas: " + frutas);
+            alert("Laticinios: " + laticinios);
+            alert("Congelados: " + congelados);
+            alert("Doces: " + doces);
+            const remover = prompt("Digite o item a ser removido: ");
+            if(alimentos.includes(remover)){
+                if(frutas.includes(remover)){
+                    frutas.splice(frutas.indexOf(remover));
+                }
+                if(laticinios.includes(remover)){
+                    laticinios.splice(laticinios.indexOf(remover));
+                }
+                if(congelados.includes(remover)){
+                    congelados.splice(congelados.indexOf(remover));
+                }
+                if(doces.includes(remover)){
+                    doces.splice(doces.indexOf(remover));
+                }
+                alert("Lista de compras: ");
+                alert("Frutas: " + frutas);
+                alert("Laticinios: " + laticinios);
+                alert("Congelados: " + congelados);
+                alert("Doces: " + doces);
+            }
+            else{
+                alert("O alimento não foi encontrado na lista.");
+            }
+        }
+    }
+    </script>
+</body>
+</html>
